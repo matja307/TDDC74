@@ -1,18 +1,21 @@
+(load "matrix.rkt")
+(load "object-system.scm")
+
 (define (make-board)
   
-  (define matrix (empty-matrix))
+  (define matrix (make-matrix))
     
-  (define (put-brick! self player x y)
-    (set! matrix (matrix-change-cell matrix x y player)))
+  (define (put-brick! self x y player)
+    (ask matrix 'set-cell! x y player))
   
-  (define (valid-move? self player x y)
+  (define (valid-move? self x y player)
     #t)
   
   (define (count-bricks self)
-    (matrix-count matrix 1))
+    (ask matrix 'count-bricks 1))
   
   (define (print-matrix self)
-    (matrix-display matrix))
+    (ask matrix 'print))
 
   
   (define (self msg)
