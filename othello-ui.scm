@@ -351,8 +351,10 @@
                                     (alignment '(center top)) 
                                     (stretchable-width #f)
                                     (stretchable-height #t)))
-
- (define canvas (instantiate board-view% (main-panel)))
+  
+   
+  
+ (define canvas (instantiate board-view% (main-panel))) 
 
  (define (refresh)
    (send canvas on-paint))
@@ -371,7 +373,7 @@
               ("Quit" control-panel (lambda (e b) (quit-fn)))
               (horiz-margin 2)
               (vert-margin 2)
-              (stretchable-width #t))
+              (stretchable-width #t))   
  )
 
 

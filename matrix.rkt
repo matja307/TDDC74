@@ -11,7 +11,9 @@
           (list #f #f #f #f #f #f #f #f)))
   
   (define (matrix-ref self x y)
-    (list-ref (list-ref mx y) x))
+    (if (or (>= x 8) (>= y 8) (< x 0) (< y 0))
+        #f
+        (list-ref (list-ref mx y) x)))
   
   (define (set-cell! self x y val)
     (define (iter-x xi yi)
