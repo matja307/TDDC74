@@ -1,5 +1,6 @@
 (define (make-matrix)
   
+  ;; Starting matrix
   (define mx
     (list (list #f #f #f #f #f #f #f #f)
           (list #f #f #f #f #f #f #f #f)
@@ -10,11 +11,20 @@
           (list #f #f #f #f #f #f #f #f)
           (list #f #f #f #f #f #f #f #f)))
   
+  ;; proc: matrix-ref
+  ;; param: (matrix) self, (int) x, (int) y
+  ;; return: (?) 
+  ;; Returns the content of cell with coordinate
+  ;; 'x','y' in mx. 
   (define (matrix-ref self x y)
     (if (or (>= x 8) (>= y 8) (< x 0) (< y 0))
         #f
         (list-ref (list-ref mx y) x)))
   
+  ;; proc: set-cell!
+  ;; param: (matrix) self, (int) x, (int) y, (?) val
+  ;; return: (void) 
+  ;; Updates mx to hold value 'val' in cell 'x','y'.
   (define (set-cell! self x y val)
     (define (iter-x xi yi)
       (cond ((= xi 8) '())
@@ -28,6 +38,10 @@
     
     (set! mx (iter-y 0)))
   
+  ;; proc: print
+  ;; param: (matrix) self
+  ;; return: (void) 
+  ;; Prints a representation of mx
   (define (print self)
     (define (iter mx-left)
       (if (null? (cdr mx-left))
@@ -39,6 +53,10 @@
     
     (iter mx))
   
+  ;; proc: count-cells
+  ;; param: (matrix) self, (?) val
+  ;; return: (int)  
+  ;; Returns a count of the instances of 'val' in mx.
   (define (count-cells self val)
     (define (iter-x list-left)
       (cond ((null? list-left) 0)

@@ -5,6 +5,10 @@
 
 (init)
 
+;; proc: wait 
+;; param: (int) ms
+;; return: (void)
+;; Pauses program in ms milliseconds. 
 (define (wait ms)
   (let ((go #f)) 
     (define timer
@@ -13,7 +17,11 @@
       (cond ((not go) (rec))))
     (send timer start ms)
     (rec)))
-  
+
+;; proc: get-next-move 
+;; param: (player) player
+;; return: (pair) (x . y)
+;; Returns the next move from acive player
 (define (get-next-move player)
   (if (ask player 'ai?)
       (begin
@@ -22,6 +30,10 @@
       (begin
         (get-next-move))))
 
+;; proc: swich-turn
+;; param: -
+;; return: (void)
+;; Swiches player turn. 
 (define (swich-turn)
   (if (eq? *turn* car)
           (set! *turn* cdr)

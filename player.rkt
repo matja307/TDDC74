@@ -14,6 +14,7 @@
           (list -20 -50 -5 -5 -5 -5 -50 -20)
           (list 100 -20 20  5  5 20 -20 100)))
   
+  ;;Decreases bricks by one
   (define (countdown-bricks self) 
     (set! bricks (- bricks 1)))
   
