@@ -49,7 +49,7 @@
   
   ;; returns the position that gives maximum score in the possible-score-list (above)
   (define (calculate-move self)
-    (let ((pivot 0) 
+    (let ((pivot -450) 
           (pos '()))
       (define (iter lst)
         (cond ((null? lst) pos)
@@ -73,4 +73,5 @@
   
   self)
 
+;;Tests
 (define player-1 (make-player 1 #f))
