@@ -1,0 +1,296 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9F1FAA6217478D8C00DA0C0B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1FAA6117478D8C00DA0C0B /* Cocoa.framework */; };
+		9F1FAA6C17478D8C00DA0C0B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F1FAA6A17478D8C00DA0C0B /* InfoPlist.strings */; };
+		9F1FAA6E17478D8C00DA0C0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1FAA6D17478D8C00DA0C0B /* main.m */; };
+		9F1FAA7217478D8C00DA0C0B /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 9F1FAA7017478D8C00DA0C0B /* Credits.rtf */; };
+		9F1FAA7517478D8C00DA0C0B /* QuartzPlaygroundAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1FAA7417478D8C00DA0C0B /* QuartzPlaygroundAppDelegate.m */; };
+		9F1FAA7817478D8C00DA0C0B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F1FAA7617478D8C00DA0C0B /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9F1FAA5D17478D8C00DA0C0B /* QuartzPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuartzPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F1FAA6117478D8C00DA0C0B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		9F1FAA6417478D8C00DA0C0B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		9F1FAA6517478D8C00DA0C0B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		9F1FAA6617478D8C00DA0C0B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9F1FAA6917478D8C00DA0C0B /* QuartzPlayground-Info.plist */ = {isa = PBXFileReference; path = "QuartzPlayground-Info.plist"; sourceTree = "<group>"; };
+		9F1FAA6B17478D8C00DA0C0B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9F1FAA6D17478D8C00DA0C0B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9F1FAA6F17478D8C00DA0C0B /* QuartzPlayground-Prefix.pch */ = {isa = PBXFileReference; path = "QuartzPlayground-Prefix.pch"; sourceTree = "<group>"; };
+		9F1FAA7117478D8C00DA0C0B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		9F1FAA7317478D8C00DA0C0B /* QuartzPlaygroundAppDelegate.h */ = {isa = PBXFileReference; path = QuartzPlaygroundAppDelegate.h; sourceTree = "<group>"; };
+		9F1FAA7417478D8C00DA0C0B /* QuartzPlaygroundAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuartzPlaygroundAppDelegate.m; sourceTree = "<group>"; };
+		9F1FAA7717478D8C00DA0C0B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9F1FAA5A17478D8C00DA0C0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F1FAA6217478D8C00DA0C0B /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9F1FAA5217478D8B00DA0C0B = {
+			isa = PBXGroup;
+			children = (
+				9F1FAA6717478D8C00DA0C0B /* QuartzPlayground */,
+				9F1FAA6017478D8C00DA0C0B /* Frameworks */,
+				9F1FAA5E17478D8C00DA0C0B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9F1FAA5E17478D8C00DA0C0B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F1FAA5D17478D8C00DA0C0B /* QuartzPlayground.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9F1FAA6017478D8C00DA0C0B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F1FAA6117478D8C00DA0C0B /* Cocoa.framework */,
+				9F1FAA6317478D8C00DA0C0B /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9F1FAA6317478D8C00DA0C0B /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F1FAA6417478D8C00DA0C0B /* AppKit.framework */,
+				9F1FAA6517478D8C00DA0C0B /* CoreData.framework */,
+				9F1FAA6617478D8C00DA0C0B /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		9F1FAA6717478D8C00DA0C0B /* QuartzPlayground */ = {
+			isa = PBXGroup;
+			children = (
+				9F1FAA7317478D8C00DA0C0B /* QuartzPlaygroundAppDelegate.h */,
+				9F1FAA7417478D8C00DA0C0B /* QuartzPlaygroundAppDelegate.m */,
+				9F1FAA7617478D8C00DA0C0B /* MainMenu.xib */,
+				9F1FAA6817478D8C00DA0C0B /* Supporting Files */,
+			);
+			path = QuartzPlayground;
+			sourceTree = "<group>";
+		};
+		9F1FAA6817478D8C00DA0C0B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9F1FAA6917478D8C00DA0C0B /* QuartzPlayground-Info.plist */,
+				9F1FAA6A17478D8C00DA0C0B /* InfoPlist.strings */,
+				9F1FAA6D17478D8C00DA0C0B /* main.m */,
+				9F1FAA6F17478D8C00DA0C0B /* QuartzPlayground-Prefix.pch */,
+				9F1FAA7017478D8C00DA0C0B /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9F1FAA5C17478D8C00DA0C0B /* QuartzPlayground */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F1FAA7B17478D8C00DA0C0B /* Build configuration list for PBXNativeTarget "QuartzPlayground" */;
+			buildPhases = (
+				9F1FAA5917478D8C00DA0C0B /* Sources */,
+				9F1FAA5A17478D8C00DA0C0B /* Frameworks */,
+				9F1FAA5B17478D8C00DA0C0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuartzPlayground;
+			productName = QuartzPlayground;
+			productReference = 9F1FAA5D17478D8C00DA0C0B /* QuartzPlayground.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9F1FAA5417478D8B00DA0C0B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = QuartzPlayground;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 9F1FAA5717478D8B00DA0C0B /* Build configuration list for PBXProject "QuartzPlayground" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9F1FAA5217478D8B00DA0C0B;
+			productRefGroup = 9F1FAA5E17478D8C00DA0C0B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9F1FAA5C17478D8C00DA0C0B /* QuartzPlayground */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9F1FAA5B17478D8C00DA0C0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F1FAA6C17478D8C00DA0C0B /* InfoPlist.strings in Resources */,
+				9F1FAA7217478D8C00DA0C0B /* Credits.rtf in Resources */,
+				9F1FAA7817478D8C00DA0C0B /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9F1FAA5917478D8C00DA0C0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F1FAA6E17478D8C00DA0C0B /* main.m in Sources */,
+				9F1FAA7517478D8C00DA0C0B /* QuartzPlaygroundAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9F1FAA6A17478D8C00DA0C0B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F1FAA6B17478D8C00DA0C0B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9F1FAA7017478D8C00DA0C0B /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F1FAA7117478D8C00DA0C0B /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		9F1FAA7617478D8C00DA0C0B /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F1FAA7717478D8C00DA0C0B /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9F1FAA7917478D8C00DA0C0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9F1FAA7A17478D8C00DA0C0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9F1FAA7C17478D8C00DA0C0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QuartzPlayground/QuartzPlayground-Prefix.pch";
+				INFOPLIST_FILE = "QuartzPlayground/QuartzPlayground-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9F1FAA7D17478D8C00DA0C0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QuartzPlayground/QuartzPlayground-Prefix.pch";
+				INFOPLIST_FILE = "QuartzPlayground/QuartzPlayground-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9F1FAA5717478D8B00DA0C0B /* Build configuration list for PBXProject "QuartzPlayground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F1FAA7917478D8C00DA0C0B /* Debug */,
+				9F1FAA7A17478D8C00DA0C0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F1FAA7B17478D8C00DA0C0B /* Build configuration list for PBXNativeTarget "QuartzPlayground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F1FAA7C17478D8C00DA0C0B /* Debug */,
+				9F1FAA7D17478D8C00DA0C0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9F1FAA5417478D8B00DA0C0B /* Project object */;
+}
