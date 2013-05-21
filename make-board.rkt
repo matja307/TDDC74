@@ -2,18 +2,36 @@
 
 (define (make-board)
   
+  ;Board matrix
   (define matrix (make-matrix))
     
+  ;; proc: put-brick!
+  ;; param: (board) self, (int) x, (int) y, (int) player <color value>
+  ;; return: (void)
+  ;; Changes matrix to account for a brick on coordinate x,y in color player
   (define (put-brick! self x y player)
     (ask matrix 'set-cell! x y player))
   
+  ;; proc: count-bricks
+  ;; param: (board) self
+  ;; return: (pair) (#black . #white)
+  ;; Returns a pair with the number of black and white bricks on the board
   (define (count-bricks self)
     (cons (ask matrix 'count-cells 0) (ask matrix 'count-cells 1)))
   
+  ;; proc: print-matrix
+  ;; param: (board) self
+  ;; return: (void)
+  ;; Prints a represenatation of the matrix
   (define (print-matrix self)
     (ask matrix 'print))
   
-  
+  ;; proc: list-of-changing-bricks
+  ;; param: (board) self, (int) x, (int) y, (int) player-color
+  ;; return: (list) ((x1 . y1) ... (xn . yn))
+  ;; Returns a list of the coordinates of all brics that 
+  ;; would flip if a brick of color 'player-color' would
+  ;; be placed on coordinate 'x','y'.
   (define (list-of-changing-bricks self x y player-color)
     (let ((result '())
           (temp-list '()))
@@ -22,19 +40,19 @@
         (let ((next (cons (+ (car current) (car direction)) 
                           (+ (cdr current) (cdr direction)))))
           
-          (cond ((or (= (car next) 8) ;;Nästa ruta utanför spelplanen
+          (cond ((or (= (car next) 8) 
                      (= (cdr next) 8)
                      (= (car next) -1)
                      (= (cdr next) -1))
                  #f)
-                ((not (ask matrix 'matrix-ref (car current) (cdr current))) ;;Nuvarande bricka tom
+                ((not (ask matrix 'matrix-ref (car current) (cdr current))) 
                  #f)
-                ((eq? (ask matrix 'matrix-ref (car current) (cdr current)) player-color) ;;Nuvarande bricka min färg       
+                ((eq? (ask matrix 'matrix-ref (car current) (cdr current)) player-color) 
                  #f)
-                ((eq? (ask matrix 'matrix-ref (car next) (cdr next)) player-color) ;;Nästa bricka min färg       
+                ((eq? (ask matrix 'matrix-ref (car next) (cdr next)) player-color)
                  (set! temp-list (cons current temp-list))
                  (set! result (append temp-list result)))
-                (else ;;Nubvarande bricka motståndarens färg
+                (else
                  (set! temp-list (cons current temp-list))
                  (count direction next)))))
       
@@ -57,14 +75,27 @@
       
       result))
 
-  
+  ;; proc: count-changing-bricks
+  ;; param: (board) self, (int) x, (int) y, (int) player-color
+  ;; return: (int) 
+  ;; Returns the number of bricks that would flip if a brick of color
+  ;; 'player-color' would be placed on coordinate 'x','y'.
   (define (count-changing-bricks self x y player-color)
     (length (list-of-changing-bricks self x y player-color)))
   
+  ;; proc: valid-move?
+  ;; param: (board) self, (int) x, (int) y, (int) player-color
+  ;; return: (bool) 
+  ;; Returns a boolean of whether a move on coordinate 'x','y' of color
+  ;; 'player-color' is a valid move.
   (define (valid-move? self x y player-color)
     (and (not (ask matrix 'matrix-ref x y)) 
              (> (ask self 'count-changing-bricks x y player-color) 0)))
 
+  ;; proc: valid-moves-list
+  ;; param: (board) self, (int) player-color
+  ;; return: (list) ((x1 . y1) ... (xn, yn)) 
+  ;; Returns a list of all valid moves of color 'player-color
   (define (valid-moves-list self player-color)
     (let ((lst '()))
       (define (iter-x x y)
@@ -87,6 +118,12 @@
       (iter-y 0)
       lst))
   
+  ;; proc: flip!
+  ;; param: (board) self, (int) x, (int) y, (int) player-color
+  ;; return: (void) 
+  ;; Changes matrix and updates GUI with a brick on coordinates 'x','y'
+  ;; of color 'player-color', aswell as all other bricks flipped by this 
+  ;; move.
   (define (flip! self x y player-color)
     (define (iter lst)
       (let ((x (caar lst))
